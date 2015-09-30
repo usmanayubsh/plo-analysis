@@ -1,0 +1,183 @@
+/********************
+ Custom Font Settings
+*********************/
+@font-face {
+    font-family: 'gotham_htf_book';
+    src: url('fonts/gothamhtf-book-webfont.eot');
+    src: url('fonts/gothamhtf-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gothamhtf-book-webfont.woff') format('woff'),
+         url('fonts/gothamhtf-book-webfont.ttf') format('truetype'),
+         url('fonts/gothamhtf-book-webfont.svg#gotham_htfbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+   /*outline: 1px solid red !important;*/
+   font-family: 'gotham_htf_book';
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/********************
+ Media Query
+*********************/
+@media only screen and (max-width: 635px) and (orientation: landscape) {
+
+
+}
+
+/********************
+ Defining the grid
+*********************/
+
+.grid {
+    margin: 0 auto;
+    min-width: 915px;
+    max-width: 960px;
+    width: 100%;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 24.99%;
+}
+
+.col-4 {
+    width: 33.32%;
+}
+
+.col-5 {
+    width: 41.65%;
+}
+
+.col-6 {
+    width: 49.98%;
+}
+
+.col-7 {
+    width: 58.31%;
+}
+
+.col-8 {
+    width: 66.64%;
+}
+
+.col-9 {
+    width: 74.97%;
+}
+
+.col-10 {
+    width: 83.30%;
+}
+
+.col-11 {
+    width: 91.63%;
+}
+
+.col-12 {
+    width: 99.96%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.banner {
+    margin-bottom: 20px;
+}
+
+.line hr {
+    margin-bottom: 20px;
+}
+
+.header h1, h2 {
+    color: #0066FF;
+    margin: 10px 5px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.header h1 {
+    text-transform: uppercase;
+    text-align: right;
+    margin-top: 25px;
+    font-size: xx-large;
+}
+
+.header h2 {
+    font-size: initial;
+}
+
+.nav ul {
+    width: 100%;
+    float: left;
+    margin: 1em 0 1em 0;
+    padding: 0;
+    list-style: none;
+    background-color: #F2F2F2;
+    border-bottom: 1px solid #CCC;
+    border-top: 1px solid #CCC;
+}
+
+.nav ul li {
+    float: left;
+    position: relative;
+    padding: 3px 0;
+    text-align: center;
+}
+
+.nav ul li a {
+    outline: none;
+    display: block;
+    padding: 6px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #0066FF;
+    border-right: 0.5px solid #CCC;
+}
+
+.nav ul li a.current {
+    border-radius: 4px;
+    background-color: #0066FF;
+    color: #FFF;
+}
+
+.nav ul li a:hover {
+    border-radius: 0px;
+    color: #0066FF;
+    background-color: #FFF;
+}
+
+.nav ul.sub-menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+}
+
+.nav ul.sub-menu li {
+    text-align: center
+}
+
+.nav li:hover ul.sub-menu {
+    display: block;
+}
+
+.copyright {
+    margin-top: -13px;
+    font-size: 90%;
+    color: #898989;
+}

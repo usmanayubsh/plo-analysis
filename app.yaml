@@ -2,7 +2,7 @@ application: plo-analysis
 version: 1
 runtime: python27
 api_version: 1
-threadsafe: true
+threadsafe: false
 
 handlers:
 - url: /favicon\.ico
@@ -20,4 +20,10 @@ handlers:
 
 libraries:
 - name: jinja2
+  version: latest
+
+- name: matplotlib
+  version: latest
+
+- name: numpy
   version: latest

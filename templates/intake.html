@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Intake Achievement Evaluation</h2>
+        <div class="query-result row">
+            <div class="query-sec col-6">
+                {% if programs %}
+                    <form method="post">
+                        Select a program <br>
+                        <select name="program" onchange="this.form.submit()">
+                            <option disabled selected>
+                                -- select an option --
+                            </option>
+                            {% for program in programs %}
+                                {% if program_selected == program %}
+                                    <option value="{{program}}" selected>
+                                        {{program}}
+                                    </option>
+                                {% else %}
+                                    <option value="{{program}}">
+                                        {{program}}
+                                    </option>
+                                {% endif %}
+                            {% endfor %}
+                            {{programs}}
+                        </select>
+                        <br><br>
+                    </form>
+                {% endif %}
+
+                {% if semesters %}
+                    <form method="post">
+                        Select a semester <br>
+                        <select name="semester" onchange="this.form.submit()">
+                            <option disabled selected>
+                                -- select an option --
+                            </option>
+                            {% for semester in semesters %}
+                                {% if semester_selected == semester %}
+                                    <option value="{{semester}}" selected>
+                                        {{semester}}
+                                    </option>
+                                {% else %}
+                                    <option value="{{semester}}">
+                                        {{semester}}
+                                    </option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                        <br><br>
+                    </form>
+                {% endif %}
+
+                {% if intakes %}
+                    <form method="post">
+                        Select an Intake <br>
+                        <select name="intake" onchange="this.form.submit()">
+                            <option disabled selected>
+                                -- select an option --
+                            </option>
+                            {% for intake in intakes %}
+                                {% if intake_selected == intake %}
+                                    <option value="{{intake}}" selected disabled>
+                                        {{intake}}
+                                    </option>
+                                {% else %}
+                                    <option value="{{intake}}">
+                                        {{intake}}
+                                    </option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                        <br><br>
+                    </form>
+                {% endif %}
+            </div>
+
+            <div class="result-sec col-6">
+
+            </div>
+        </div>
+{% endblock %}

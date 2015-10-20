@@ -202,6 +202,11 @@
     height: 400px;
 }
 
+.result-sec img {
+    max-width: 100%;
+    height: auto;
+}
+
 form {
     padding: 20px 20px;
 }

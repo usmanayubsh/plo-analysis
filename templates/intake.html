@@ -21,7 +21,6 @@
                                     </option>
                                 {% endif %}
                             {% endfor %}
-                            {{programs}}
                         </select>
                         <br><br>
                     </form>
@@ -52,14 +51,14 @@
 
                 {% if intakes %}
                     <form method="post">
-                        Select an Intake <br>
-                        <select name="intake" onchange="this.form.submit()">
+                        Select an intake <br>
+                        <select name="intake">
                             <option disabled selected>
                                 -- select an option --
                             </option>
                             {% for intake in intakes %}
                                 {% if intake_selected == intake %}
-                                    <option value="{{intake}}" selected disabled>
+                                    <option value="{{intake}}" selected>
                                         {{intake}}
                                     </option>
                                 {% else %}
@@ -70,12 +69,15 @@
                             {% endfor %}
                         </select>
                         <br><br>
+                        <input type="submit">
                     </form>
                 {% endif %}
             </div>
 
             <div class="result-sec col-6">
-
+                {% if figure %}
+                    <img src='data:image/png;base64,{{figure}}'/>
+                {% endif %}
             </div>
         </div>
 {% endblock %}

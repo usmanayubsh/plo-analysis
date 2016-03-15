@@ -1,0 +1,5 @@
+# data files
+/data
+
+# python
+*.pyc

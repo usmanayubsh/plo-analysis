@@ -15,12 +15,16 @@ def intake_list(sheet_list):
 
 def update_intake_dic():
     dic = {}
+    print 'Updating pickles:',
     for program in glob('data/*'):
         program_dic = {}
+        print '*',
         for semester in glob(os.path.join(program, '*')):
             semester_dic = {}
+            print '.',
             semester_wb = xlrd.open_workbook(filename = semester)
             for intake in intake_list(semester_wb.sheet_names()):
+                print '!',
                 intake_sheet = xlrd.open_workbook(filename = semester).sheet_by_name(intake)
 
                 no_of_rows, no_of_cols = intake_sheet.nrows, intake_sheet.ncols
@@ -46,6 +50,7 @@ def update_intake_dic():
                 semester_dic[intake] = plo_av
             program_dic[os.path.basename(semester)[:-5]] = semester_dic
         dic[os.path.basename(program)] = program_dic
+    print 'Done!\n'
     return dic
 
 def update_course_dic():
